@@ -179,6 +179,25 @@
         
 
         <li class="nav-item">
+          <a href="/#publication" data-target="#publication">
+            
+            <span>Publication</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
           <a href="/#contact" data-target="#contact">
             
             <span>Contact</span>
@@ -353,7 +372,7 @@
 
 <div class="row">
   <div class="col-xs-12 col-md-4 section-heading">
-    <h1>Work Experience</h1>
+    <h1>Experience</h1>
     
   </div>
   <div class="col-xs-12 col-md-8">
@@ -416,6 +435,110 @@
 <img src="/img/Average Response time.jpg"width="70%" style="display:block; margin:auto;" /></p>
 
 <p><br>
+<b><u><font face="Arial" color="#17202A" size="5">Task Executor Library</font></u></b><div style="float: right"></br></div>
+<font face="Arial" color="#F1948A" size="3"><p><li>Technology: Java </li></p></font>
+<font face="Arial" color="#17202A" size="3"><li>Implemented the multithreaded synchronization needed to implement the Task Executor service.
+<li>Developed a FIFO queue using the bounded buffer design by Java objects as monitors.
+<li>Used the FIFO queue on tasks to execute on multi-thread, printed out the name of threads for record.
+<li>Blocking FIFO code implement:</li></font></p>
+
+<p><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/github-gist.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></p>
+
+<pre><code class="language-Java">public class BlockingFIFO {
+
+    private Task blockingFifo[];
+    private int rear;
+    private int front;
+    private int count;
+    private Object notFull;
+    private Object notEmpty;
+    private int size;
+
+    public BlockingFIFO(int size) {
+
+        this.size = size;
+        blockingFifo = new Task[size];
+        rear = 0;
+        front = 0;
+        count = 0;
+        notFull = new Object();
+        notEmpty = new Object();
+
+    }
+
+    /*
+     * Method for retrieving a task from BlockingFifo
+     */
+    public Task take() {
+
+        while (count == 0) {
+            synchronized (notEmpty) {
+                try {
+                    notEmpty.wait();
+                } catch (InterruptedException exception) {
+                    exception.printStackTrace();
+                }
+            }
+        }
+        synchronized (this) {
+            Task task = blockingFifo[front];
+            front = (front + 1) % size;
+            count--;
+
+            synchronized (notFull) {
+                notFull.notify();
+            }
+            return task;
+        }
+    }
+
+    /*
+     * Method for inserting a new task into blocking FIFO
+     */
+    public void put(Task task) {
+
+        while (count == size) {
+            synchronized (notFull) {
+                try {
+                    notFull.wait();
+                } catch (InterruptedException exception) {
+                    exception.printStackTrace();
+                }
+            }
+        }
+        synchronized (this) {
+            blockingFifo[rear] = task;
+            rear = (rear + 1) % size;
+            count++;
+
+            synchronized (notEmpty) {
+                notEmpty.notify();
+            }
+            return;
+        }
+
+    }
+
+}
+</code></pre>
+
+<p><br>
+<b><u><font face="Arial" color="#17202A" size="5">Datastore by implementing client – Server system</font></u></b><div style="float: right"></br></div>
+<font face="Arial" color="#F1948A" size="3"><p><li>Technology: Java </li></p></font>
+<font face="Arial" color="#17202A" size="3"><li>Designed a Datastore Client API to execute the client-side requests and a Server in localhost to response the requests.
+<li>Established datastore programs for process requests to the connected server.
+<li>Applied localhost server and Amazon Web Services to test Client API implementation.</li></font></p>
+
+<p><br>
+<b><u><font face="Arial" color="#17202A" size="5">Design a database for Dallas Motors management system</font></u></b><div style="float: right"></br></div>
+<font face="Arial" color="#F1948A" size="3"><p><li>Technology: MySQL </li></p></font>
+<font face="Arial" color="#17202A" size="3"><li>Designed a EER model to accurately represent requirements of Dallas Motors.
+<li>Established a relational DBMS to implement the database, converted conceptual model to a logical model.
+<li>Built MySQL statements to create database, included tables and structures, implemented data for testing queries.</li></font></p>
+
+<p><br>
 <b><u><font face="Arial" color="#17202A" size="5">Analyze signal processing tasks of PowerPC under Real Time Condition</font></u></b><div style="float: right"><a href="https://github.com/davidshih175/Analyze-signal-processing-tasks-of-PowerPC-under-Real-Time-Condition" target="_blank">Link</a></br></div>
 <font face="Arial" color="#F1948A" size="3"><p><li>Technology: C++ | Linux </li></p></font>
 <font face="Arial" color="#17202A" size="3"><li>Designed a C++ program using BFS algorithm to evaluate system utilization, hyperperiod and optimize frame size.
@@ -448,19 +571,33 @@
   
   
   
-  <section id="tags" class="home-section">
+  <section id="publication" class="home-section">
     <div class="container">
       
 
 
+
 <div class="row">
   <div class="col-xs-12 col-md-4 section-heading">
-    <h1>Tags</h1>
+    <h1>Publication</h1>
     
   </div>
   <div class="col-xs-12 col-md-8">
+    <p><p><ul style="list-style-type:disc;">
+<b><u><font face="Arial" color="#17202A" size="5">The Study of Fabrication and Tribological Properties of Rubber Based Friction Material</font></u></b><div style="float: right"><a href="https://etds.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/ccd=zVPghx/record?r1=1&amp;h1=0" target="_blank">Link</a></br></div>
+<font face="Arial" color="#F1948A" size="3"><p><li>Advised by Prof. Chien-Ping Ju, Master Thesis, NCKU, Jul 2012</li></p></font>
+<font face="Arial" color="#17202A" size="3"><li>Investigated the effects of diverse fabrication parameters (heating rate of post-cured、molding pressure、temperature of post-cured and molding temperature) on tribological properties of Nitrile Butadiene Rubber (NBR)-based friction material.
+<li>The mechanical properties, tribological properties, and microstructure of NBR based friction material are measured by Shore-type hardness tester, sliding wear tester, surface roughness tester and scanning electron microscopy.</li></font></p>
+
+<p><b><u><font face="Arial" color="#17202A" size="5">The effect of Molding Temperature on the Fabrication and Tribological Properties of Rubber-based Friction Materials.</font></u></b><div style="float: right"></br></div>
+<font face="Arial" color="#F1948A" size="3"><p><li>Conference Paper, Materials Research Society Taiwan, Nov 2012</li></p></font></p>
+</p>
+
+    
+      
     
 
+    
     
 
   </div>
