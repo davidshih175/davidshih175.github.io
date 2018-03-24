@@ -440,88 +440,42 @@
 <font face="Arial" color="#17202A" size="3"><li>Implemented the multithreaded synchronization needed to implement the Task Executor service.
 <li>Developed a FIFO queue using the bounded buffer design by Java objects as monitors.
 <li>Used the FIFO queue on tasks to execute on multi-thread, printed out the name of threads for record.
-<li>Blocking FIFO code implement:</li></font></p>
+<li>Blocking FIFO code implement example:</li></font></p>
 
 <p><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/github-gist.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script></p>
 
-<pre><code class="language-Java">public class BlockingFIFO {
+<pre><code class="language-Java">Task buffer[N];
+int nextin, nextout;
+int count;
+Object notfull, notempty; // Monitors used for synchronization
 
-    private Task blockingFifo[];
-    private int rear;
-    private int front;
-    private int count;
-    private Object notFull;
-    private Object notEmpty;
-    private int size;
+void put(Task task) 
+{
+  if(count == N) notfull.wait();   // Buffer is full, wait for take
 
-    public BlockingFIFO(int size) {
-
-        this.size = size;
-        blockingFifo = new Task[size];
-        rear = 0;
-        front = 0;
-        count = 0;
-        notFull = new Object();
-        notEmpty = new Object();
-
-    }
-
-    /*
-     * Method for retrieving a task from BlockingFifo
-     */
-    public Task take() {
-
-        while (count == 0) {
-            synchronized (notEmpty) {
-                try {
-                    notEmpty.wait();
-                } catch (InterruptedException exception) {
-                    exception.printStackTrace();
-                }
-            }
-        }
-        synchronized (this) {
-            Task task = blockingFifo[front];
-            front = (front + 1) % size;
-            count--;
-
-            synchronized (notFull) {
-                notFull.notify();
-            }
-            return task;
-        }
-    }
-
-    /*
-     * Method for inserting a new task into blocking FIFO
-     */
-    public void put(Task task) {
-
-        while (count == size) {
-            synchronized (notFull) {
-                try {
-                    notFull.wait();
-                } catch (InterruptedException exception) {
-                    exception.printStackTrace();
-                }
-            }
-        }
-        synchronized (this) {
-            blockingFifo[rear] = task;
-            rear = (rear + 1) % size;
-            count++;
-
-            synchronized (notEmpty) {
-                notEmpty.notify();
-            }
-            return;
-        }
-
-    }
-
+  synchronized(this) {
+    buffer[nextin] = X;
+    nextin = (nextin + 1) % N;
+    count++;
+    notempty.notify(); // Signal waiting take threads
+  }
 }
+
+Task take() 
+{
+  if(count == 0) notempty.wait(); // Buffer is empty, wait for put
+
+  synchronized(this) {
+    Task result = buffer[nextout];
+    nextout = (nextout + 1) % N;
+    count--;
+    notfull.notify(); // Signal waiting put threads
+    return result;
+  }
+}
+
 </code></pre>
 
 <p><br>
