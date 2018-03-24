@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on David Shih</title>
+    <link>https://davidshih175.github.io/home/</link>
+    <description>Recent content in Homes on David Shih</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://davidshih175.github.io/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://davidshih175.github.io/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidshih175.github.io/home/about/</guid>
+      <description>Biography I was a Process Analysis Engineer at Taiwan Semiconductor Manufacturing Company (TSMC). I have solid experience in data analysis and software development with Python and SQL for semiconductor process design and control.
+Now I’m currently a MSCS student in The University of Texas at Dallas. My major focuses on Data Science and Intelligent Systems.
+Resume</description>
+    </item>
+    
+    <item>
+      <title>Work Experience</title>
+      <link>https://davidshih175.github.io/home/work-experience/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0500</pubDate>
+      
+      <guid>https://davidshih175.github.io/home/work-experience/</guid>
+      <description>Taiwan Semiconductor Manufacturing Company (NYSE: TSM) Process Analysis EngineerSep 2013-Sep 2015 Statistical software development and application for semiconductor process design and control. Designed SQL program and created queries to implement ETL steps on Wet Bench process raw data, analyzed the trend of acid concentration and constructed analytical model, improved 33%+ lifetime cycle of APM&amp;amp;HPM. Developed Python code using Pandas and Numpy to gather data from database system for Nitride Films particle analysis, established particle predictive model with 90% accuracy rate, reduced particle effect by 35%.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://davidshih175.github.io/home/projects/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidshih175.github.io/home/projects/</guid>
+      <description>Implement a simple video processing application in LITMUSRTLink Technology: C | Linux | FFmpeg
+ Applied LITMUSRT to evaluate the performance of real-time scheduling (PSN-EDF, P-FP, C-EDF and GSN-EDF). Implemented simple video as an input source, designed C program to link FFmpeg and LITMUSRT for decoding. Proved that average lateness and response time of PSN-EDF and P-FP were lower than others by 29.6% and 3.52%. 
+Analyze signal processing tasks of PowerPC under Real Time ConditionLink Technology: C++ | Linux</description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>https://davidshih175.github.io/home/tags/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://davidshih175.github.io/home/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://davidshih175.github.io/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidshih175.github.io/home/contact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
