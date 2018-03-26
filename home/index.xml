@@ -29,7 +29,7 @@ Resume</description>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0500</pubDate>
       
       <guid>https://davidshih175.github.io/home/work-experience/</guid>
-      <description>Taiwan Semiconductor Manufacturing Company (NYSE: TSM) Process Analysis EngineerSep 2013-Sep 2015 Statistical software development and application for semiconductor process design and control. Designed SQL program and created queries to implement ETL steps on Wet Bench process raw data, analyzed the trend of acid concentration and constructed analytical model, improved 33%+ lifetime cycle of APM&amp;amp;HPM. Developed Python code using Pandas and Numpy to gather data from database system for Nitride Films particle analysis, established particle predictive model with 90% accuracy rate, reduced particle effect by 35%.</description>
+      <description>Taiwan Semiconductor Manufacturing Company (NYSE: TSM) Process Analysis EngineerSep 2013-Sep 2015 Statistical software development and application for semiconductor process design and control. Designed SQL program and created queries to implement ETL steps on Wet Bench process raw data, analyzed the trend of acid concentration and constructed analytical model, improved 33%+ lifetime of acid. Developed Python code using Pandas and Numpy to gather data from database system for Nitride Films particle analysis, established particle predictive model with 90% accuracy rate, reduced particle effect by 35%.</description>
     </item>
     
     <item>
