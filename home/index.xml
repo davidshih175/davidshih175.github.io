@@ -18,8 +18,8 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>https://davidshih175.github.io/home/about/</guid>
-      <description>Biography I was a Process Analysis Engineer at Taiwan Semiconductor Manufacturing Company (TSMC). I have solid experience in data analysis and software development with Python and SQL for semiconductor process design and control.
-Now I’m currently a MSCS student in The University of Texas at Dallas. My major focuses on Data Science and Intelligent Systems.
+      <description>Biography I was a Process Analysis Engineer at Taiwan Semiconductor Manufacturing Company (TSMC). I have solid experience in data analysis and software development for semiconductor process design and control.
+Now I’m currently a Software Engineer Intern at AYC Group LLC and focus on Web development as well as software design.
 Resume</description>
     </item>
     
@@ -29,7 +29,7 @@ Resume</description>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0500</pubDate>
       
       <guid>https://davidshih175.github.io/home/work-experience/</guid>
-      <description>Taiwan Semiconductor Manufacturing Company (NYSE: TSM) Process Analysis EngineerSep 2013-Sep 2015 Statistical software development and application for semiconductor process design and control. Designed SQL program and created queries to implement ETL steps on Wet Bench process raw data, analyzed the trend of acid concentration and constructed analytical model, improved 33%+ lifetime of acid. Developed Python code using Pandas and Numpy to gather data from database system for Nitride Films particle analysis, established particle predictive model with 90% accuracy rate, reduced particle effect by 35%.</description>
+      <description>AYC Group LLC Dallas, TX, United States Software Engineer InternMay 2018-Now Analyzed sales orders, purchase orders, revenue and customer behavior data to build a sales forecasting model by using Python and Scikit library, improving the accuracy rate of procurement by more than 93%. Integrated APIs of UPS, ChannelAdvisor, Bigcommerce and Fishbowl to migrate data from inventory systems to Marketplace applications, enhancing the efficiency of operator by 85% and reducing 90% human errors.</description>
     </item>
     
     <item>
