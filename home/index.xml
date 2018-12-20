@@ -29,7 +29,7 @@ Resume</description>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0500</pubDate>
       
       <guid>https://davidshih175.github.io/home/work-experience/</guid>
-      <description>AYC Group LLC Dallas, TX, United States Software Engineer InternMay 2018-Now Analyzed sales orders, purchase orders, revenue and customer behavior data to build a sales forecasting model by using Python and Scikit library, improving the accuracy rate of procurement by more than 93%. Integrated APIs of UPS, ChannelAdvisor, Bigcommerce and Fishbowl to migrate data from inventory systems to Marketplace applications, enhancing the efficiency of operator by 85% and reducing 90% human errors.</description>
+      <description>AYC Group LLC Dallas, TX, United States Software Engineer InternMay 2018-Jan 2019 Analyzed sales orders, purchase orders, revenue and customer behavior data to build a sales forecasting model using Python and sklearn library, improving the accuracy rate of procurement by more than 93%. Integrated SOAP/REST APIs of UPS, ChannelAdvisor, Bigcommerce and Fishbowl to migrate data from inventory systems to marketplace applications, enhancing the efficiency of operator by 85% and reducing 90% human errors.</description>
     </item>
     
     <item>
@@ -38,9 +38,11 @@ Resume</description>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>https://davidshih175.github.io/home/projects/</guid>
-      <description>Implement a simple video processing application in LITMUSRTLink Technology: C | Linux | FFmpeg
- Applied LITMUSRT to evaluate the performance of real-time scheduling (PSN-EDF, P-FP, C-EDF and GSN-EDF). Implemented simple video as an input source, designed C program to link FFmpeg and LITMUSRT for decoding. Proved that average lateness and response time of PSN-EDF and P-FP were lower than others by 29.6% and 3.52%. 
-Task Executor Library Technology: Java</description>
+      <description>House Prices: Advanced Regression Techniques Technology: Python | kaggle
+ Implemented normalization, evaluation and visualization for raw data, fine-tuned parameters of classifiers. Reduced redundant features and optimized algorithms, decreasing mean squared error by 20%.
+
+Implement a simple video processing application in LITMUSRTLink Technology: C | Linux | FFmpeg
+ Applied LITMUSRT to evaluate the performance of real-time scheduling (PSN-EDF, P-FP, C-EDF and GSN-EDF). Implemented simple video as an input source, designed C program to link FFmpeg and LITMUSRT for decoding.</description>
     </item>
     
     <item>
